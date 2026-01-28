@@ -27,3 +27,9 @@ Input Data → Data Cleaning & Preprocessing → ML Model Training → AQI Predi
 1. Install the required dependencies:
    ```bash
    pip install -r requirements.txt
+2. python Dashboard.py
+
+## future scope
+.Real-time AQI prediction
+.API integration
+.Mobile application
