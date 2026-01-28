@@ -1,33 +1,29 @@
-# AIware – Smart Air Quality Prediction System
+# AirAware – Smart Air Quality Prediction System
 
 ## Problem Statement
-Air pollution affects human health and the environment. Monitoring and predicting air quality helps people and authorities take preventive actions and stay informed.
+Air pollution has become a serious concern affecting human health and the environment. Continuous monitoring and prediction of air quality is essential to reduce risks and support preventive actions.
 
 ## Objective
-To analyze air quality data and display pollution levels and trends using a smart and interactive dashboard.
-
-## Dataset
-Air quality dataset containing parameters such as:
-- PM2.5
-- PM10
-- NO2
-- SO2
-- CO
+The main objective of this project is to predict air quality levels using machine learning techniques by analyzing historical air pollution data and presenting insights in a user-friendly format.
 
 ## Technologies Used
 - Python  
-- Pandas  
-- NumPy  
-- Matplotlib  
-- Seaborn  
+- Pandas, NumPy  
+- Matplotlib, Seaborn  
 - Scikit-learn  
-- Streamlit  
+
+## Dataset
+The project uses an air quality dataset containing key pollutant parameters such as:
+- PM2.5  
+- PM10  
+- NO2  
+- SO2  
+- CO  
 
 ## System Architecture
-Input Data → Data Preprocessing → ML Model → AQI Analysis → Visualization Output
+Input Data → Data Cleaning & Preprocessing → ML Model Training → AQI Prediction → Visualization Output
 
 ## How to Run
-1. Install required libraries  
-2. Run the application using:
-```bash
-streamlit run dashboard.py
+1. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
