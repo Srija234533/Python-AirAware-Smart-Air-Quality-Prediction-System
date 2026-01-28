@@ -31,5 +31,8 @@ Input Data → Data Cleaning & Preprocessing → ML Model Training → AQI Predi
 
 ## future scope
 .Real-time AQI prediction
+
 .API integration
+
 .Mobile application
+
