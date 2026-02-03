@@ -219,20 +219,41 @@ else:
         # --------------------------------------------------
         # Forecast Cards
         # --------------------------------------------------
+       # --------------------------------------------------
+# Forecast Cards (ALIGNMENT ONLY – SMALL BOXES IN LINE)
+# --------------------------------------------------
         with col2:
-            st.subheader("7-Day Forecast")
-            forecast = [("Mon", 45), ("Tue", 55), ("Wed", 70),
-                        ("Thu", 90), ("Fri", 120), ("Sat", 110), ("Sun", 80)]
-            cols = st.columns(7)
-            for i, (day, val) in enumerate(forecast):
-                status = calculate_aqi(val)[1]
-                bg = "#C8E6C9" if val <= 50 else "#FFE0B2" if val <= 100 else "#FFCDD2"
-                with cols[i]:
-                    st.markdown(
-                        f"<div style='background:{bg}; padding:10px; border-radius:10px; text-align:center; box-shadow: 0px 0px 10px {bg};'>"
-                        f"<h4>{day}</h4><h3>{val}</h3><p>{status}</p></div>",
-                        unsafe_allow_html=True
-                    )
+           st.subheader("7-Day Forecast")
+           forecast = [
+               ("Mon", 45), ("Tue", 55), ("Wed", 70),
+               ("Thu", 90), ("Fri", 120), ("Sat", 110), ("Sun", 80)
+               ]
+           cols = st.columns(7)
+           for i, (day, val) in enumerate(forecast):
+               status = calculate_aqi(val)[1]
+               bg = "#C8E6C9" if val <= 50 else "#FFE0B2" if val <= 100 else "#FFCDD2"
+               with cols[i]:
+                   st.markdown(
+                       f"""
+                <div style="
+                    background:{bg};
+                    width:100%;
+                    height:120px;
+                    border-radius:12px;
+                    display:flex;
+                    flex-direction:column;
+                    justify-content:center;
+                    align-items:center;
+                    text-align:center;
+                    box-shadow:0 2px 8px rgba(0,0,0,0.15);
+                ">
+                    <div style="font-size:14px; font-weight:600;">{day}</div>
+                    <div style="font-size:22px; font-weight:700;">{val}</div>
+                    <div style="font-size:11px; opacity:0.85;">{status}</div>
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
 
         # --------------------------------------------------
         # Thermometer
@@ -295,3 +316,18 @@ else:
 
     else:
         st.warning("Please upload Bengaluru.csv or any Air Quality CSV file to continue.")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
